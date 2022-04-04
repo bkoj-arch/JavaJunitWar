@@ -5,7 +5,7 @@ pipeline {
       agent any
       steps {
         git(url: 'https://github.com/bkoj-arch/JavaJunitWar.git', branch: 'main')
-        tool(name: 'jdk', type: 'openjdk-8-openjdk')
+        tool(name: 'openjdk-8-openjdk', type: 'openjdk-8-openjdk')
       }
     }
 
