@@ -5,12 +5,12 @@ pipeline {
       agent any
       steps {
         git(url: 'https://github.com/bkoj-arch/JavaJunitWar.git', branch: 'main')
-        tool(name: 'jdk8', type: 'jdk')
       }
     }
 
     stage('build') {
       steps {
+        tool(name: 'jdk8', type: 'jdk')
         sh 'mvn -v'
         sh 'mvn clean install'
       }
